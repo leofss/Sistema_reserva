@@ -1,4 +1,5 @@
 ﻿using System;
+using Sistema_reserva.
 
 namespace Sistema_reserva
 {
@@ -6,7 +7,12 @@ namespace Sistema_reserva
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Numero da sala");
+            int num = int.Parse(Console.ReadLine());
+            Console.Write("Checkin data");
+            DateTime checkin = DateTime.Parse(Console.ReadLine());
+            Console.Write("Checkou data");
+            DateTime checkout = DateTime.Parse(Console.ReadLine());
         }
     }
 }
