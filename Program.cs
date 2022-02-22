@@ -1,5 +1,4 @@
 ﻿using System;
-using Sistema_reserva.
 
 namespace Sistema_reserva
 {
@@ -13,6 +12,8 @@ namespace Sistema_reserva
             DateTime checkin = DateTime.Parse(Console.ReadLine());
             Console.Write("Checkou data");
             DateTime checkout = DateTime.Parse(Console.ReadLine());
+
+            Reservation reservation = new Reservation(num, checkin, checkout);
         }
     }
 }

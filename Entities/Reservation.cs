@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Sistema_reserva.Entities.Exceptions;
 
 namespace Sistema_reserva
 {
@@ -26,6 +27,12 @@ namespace Sistema_reserva
         {
             TimeSpan duration = CheckOut.Subtract(CheckIn);
             return (int)duration.TotalDays;
+        }
+
+        public void UpdateDates(DateTime checkin, DateTime checkOut)
+        {
+            CheckIn = checkin;
+            CheckOut = checkOut;
         }
 
         public override string ToString()
