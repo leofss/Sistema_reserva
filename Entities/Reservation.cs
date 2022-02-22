@@ -31,8 +31,20 @@ namespace Sistema_reserva
 
         public void UpdateDates(DateTime checkin, DateTime checkOut)
         {
+            DateTime now = DateTime.Now;
+
+            if(checkin < now || checkOut < now)
+            {
+                throw new DomainEx("Datas de reserva devem ser datas futuras");
+            }
+            if(checkOut <= checkin)
+            { 
+                throw new DomainEx("Check out deve ser após checkin");
+            }
+
             CheckIn = checkin;
             CheckOut = checkOut;
+
         }
 
         public override string ToString()
